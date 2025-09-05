@@ -1,0 +1,111 @@
+/* ================================
+   Fonts
+   ================================ */
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400..800&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+
+/* Tailwind Base Import */
+@import "tailwindcss";
+
+/* ================================
+   Base Styles
+   ================================ */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* ================================
+   Theme Configuration
+   ================================ */
+@theme {
+  /* Colors */
+  --color-light: #fda7df;
+  --color-dark: #d980fa;
+  --color-accent: #747d8c;
+
+  /* Fonts */
+  --font-syne: "Syne", sans-serif;
+  --font-titillium: "Titillium Web", sans-serif;
+
+  /* Breakpoints */
+  --breakpoint-2xl: 1440px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-md: 768px;
+  --breakpoint-sm: 640px;
+  --breakpoint-xs: 480px;
+}
+
+/* ================================
+   Utilities
+   ================================ */
+@layer utilities {
+  /* Buttons */
+  .btn {
+    @apply md:px-6 px-5 md:py-3 py-2.5 
+           font-titillium font-medium tracking-wide capitalize 
+           rounded-sm md:text-base text-sm text-white 
+           bg-gradient-to-r from-dark to-light 
+           hover:from-light hover:to-dark 
+           hover:scale-105 
+           transition-all duration-500 ease-in-out;
+  }
+
+  /* Border Glow Effect */
+  .border-glow {
+    @apply relative;
+  }
+  .border-glow::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    border: 2px solid var(--color-light);
+    box-shadow: 0 0 15px var(--color-light),
+                0 0 30px var(--color-light),
+                0 0 45px var(--color-light);
+    animation: border-move 3s linear infinite;
+  }
+
+  /* Headings */
+  .heading-lg {
+    @apply font-syne font-bold 
+           2xl:text-8xl xl:text-7xl lg:text-6xl 
+           md:text-5xl sm:text-4xl text-3xl;
+  }
+  .heading-md {
+    @apply font-syne font-bold 
+           2xl:text-6xl xl:text-5xl lg:text-4xl 
+           md:text-3xl sm:text-2xl text-xl;
+  }
+  .heading-sm {
+    @apply font-syne font-semibold 
+           2xl:text-4xl xl:text-3xl lg:text-2xl 
+           md:text-xl sm:text-lg text-base;
+  }
+
+  /* Paragraphs */
+  .paragraph-lg {
+    @apply font-titillium font-medium tracking-wide
+           xl:text-xl lg:text-lg sm:text-base text-sm;
+  }
+  .paragraph-md {
+    @apply font-titillium font-medium tracking-wide
+           xl:text-lg lg:text-base text-sm;
+  }
+  .paragraph-sm {
+    @apply font-titillium font-medium tracking-wide
+           xl:text-base lg:text-sm text-xs;
+  }
+}
+
+/* Animations */
+@keyframes border-move {
+  0%   { clip-path: inset(0 0 98% 0); }
+  25%  { clip-path: inset(0 98% 0 0); }
+  50%  { clip-path: inset(98% 0 0 0); }
+  75%  { clip-path: inset(0 0 0 98%); }
+  100% { clip-path: inset(0 0 98% 0); }
+}
