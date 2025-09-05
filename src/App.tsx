@@ -1,4 +1,6 @@
 const App = () => {
+  console.log('App rendered');
+  djdfj kjer 
   return (
     <div className="py-20 text-center w-full">
       <h1 className="heading-lg bg-amber-200">
