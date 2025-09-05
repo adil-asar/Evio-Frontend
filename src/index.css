@@ -63,9 +63,10 @@ body {
     inset: 0;
     border-radius: inherit;
     border: 2px solid var(--color-light);
-    box-shadow: 0 0 15px var(--color-light),
-                0 0 30px var(--color-light),
-                0 0 45px var(--color-light);
+    box-shadow:
+      0 0 15px var(--color-light),
+      0 0 30px var(--color-light),
+      0 0 45px var(--color-light);
     animation: border-move 3s linear infinite;
   }
 
@@ -103,9 +104,19 @@ body {
 
 /* Animations */
 @keyframes border-move {
-  0%   { clip-path: inset(0 0 98% 0); }
-  25%  { clip-path: inset(0 98% 0 0); }
-  50%  { clip-path: inset(98% 0 0 0); }
-  75%  { clip-path: inset(0 0 0 98%); }
-  100% { clip-path: inset(0 0 98% 0); }
+  0% {
+    clip-path: inset(0 0 98% 0);
+  }
+  25% {
+    clip-path: inset(0 98% 0 0);
+  }
+  50% {
+    clip-path: inset(98% 0 0 0);
+  }
+  75% {
+    clip-path: inset(0 0 0 98%);
+  }
+  100% {
+    clip-path: inset(0 0 98% 0);
+  }
 }
