@@ -21,31 +21,44 @@ body {
    ================================ */
 @theme {
   /* Colors */
-  --color-light: #fda7df;
-  --color-dark: #d980fa;
+  --color-light: #c4e538;
+  --color-dark: #a3cb38;
   --color-accent: #747d8c;
 
   /* Fonts */
   --font-syne: "Syne", sans-serif;
   --font-titillium: "Titillium Web", sans-serif;
 
-  /* Breakpoints */
-  --breakpoint-2xl: 1440px;
+  /* breakpoint */
+  --breakpoint-3xl: 1440px;
+  --breakpoint-2xl: 1360px;
   --breakpoint-xl: 1280px;
+  --breakpoint-3lg: 1200px;
+  --breakpoint-2lg: 1120px;
   --breakpoint-lg: 1024px;
+  --breakpoint-3md: 950px;
+  --breakpoint-2md: 850px;
   --breakpoint-md: 768px;
+  --brekpoint-2sm: 700px;
   --breakpoint-sm: 640px;
+  --breakpoint-2xs: 560px;
   --breakpoint-xs: 480px;
+  --breakpoint-xxs: 400px;
 }
 
-/* ================================
-   Utilities
-   ================================ */
+/* Utilities*/
 @layer utilities {
+  /* container */
+
+  .containerize {
+    @apply mx-auto   3xl:max-w-screen-2xl 2xl:max-w-screen-xl xl:max-w-screen-3lg 3lg:max-w-screen-2lg 
+           2lg:max-w-screen-lg   2lg:px-0 sm:px-10 px-6;
+  }
+
   /* Buttons */
   .btn {
-    @apply md:px-6 px-5 md:py-3 py-2.5 
-           font-titillium font-medium tracking-wide capitalize 
+    @apply md:px-6 px-5  py-2.5 
+           font-titillium font-medium tracking-wide capitalize  
            rounded-sm md:text-base text-sm text-white 
            bg-gradient-to-r from-dark to-light 
            hover:from-light hover:to-dark 
