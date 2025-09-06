@@ -21,8 +21,8 @@ body {
    ================================ */
 @theme {
   /* Colors */
-  --color-light: #c4e538;
-  --color-dark: #a3cb38;
+  --color-light: #fda7df;
+  --color-dark: #d980fa;
   --color-accent: #747d8c;
 
   /* Fonts */
@@ -57,9 +57,9 @@ body {
 
   /* Buttons */
   .btn {
-    @apply md:px-6 px-5  py-2.5 
+    @apply md:px-8 px-5  md:py-2.5 py-2 
            font-titillium font-medium tracking-wide capitalize  
-           rounded-sm md:text-base text-sm text-white 
+           rounded-full md:text-base text-sm text-white 
            bg-gradient-to-r from-dark to-light 
            hover:from-light hover:to-dark 
            hover:scale-105 

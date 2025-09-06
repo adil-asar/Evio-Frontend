@@ -12,20 +12,20 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="h-[70px] sticky top-0 z-50 bg-white ">
+    <header className="h-[75px] sticky top-0 z-50 bg-black shadow-md">
       <div className="containerize flex justify-between items-center h-full">
         <div className="text-2xl font-bold">
           <Link to="/">
-            <img src="./images/logo.png" alt="logo" className="w-16 h-15" />
+            <img src="./images/logo.png" alt="logo" className="w-28 " />
           </Link>
         </div>
 
-        <nav className="hidden md:flex gap-12 font-medium tracking-wide font-titillium text-accent capitalize">
+        <nav className="hidden md:flex gap-12  tracking-wider font-titillium font-semibold text-white capitalize">
           {menuItems.map((item) => (
             <Link
               key={item.path}
               to={item.path}
-              className="hover:text-gray-400 transition-colors duration-300"
+              className="hover:text-dark  transition-colors duration-300"
             >
               {item.name}
             </Link>
@@ -48,7 +48,7 @@ const Navbar = () => {
       </div>
 
       <div
-        className={`absolute top-[70px] left-0 w-full bg-white shadow-md text-base font-syne font-semibold flex flex-col md:hidden transition-all duration-500 ease-in-out ${
+        className={`absolute top-[70px] left-0 w-full bg-white shadow-md text-base font-titillium font-semibold flex flex-col md:hidden transition-all duration-500 ease-in-out ${
           isOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
       >
@@ -63,7 +63,7 @@ const Navbar = () => {
           </Link>
         ))}
 
-        <Link to="/contact" className="m-4b tn text-center" onClick={() => setIsOpen(false)}>
+        <Link to="/contact" className="m-4  text-center btn" onClick={() => setIsOpen(false)}>
           Contact
         </Link>
       </div>
