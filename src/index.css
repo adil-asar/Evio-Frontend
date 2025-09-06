@@ -66,6 +66,19 @@ body {
            transition-all duration-500 ease-in-out;
   }
 
+  .bg-radial {
+    background: radial-gradient(circle, var(--color-light), var(--color-dark));
+  }
+
+  .bg-radial-reverse {
+    background: radial-gradient(
+      at center bottom,
+      var(--color-light),
+      rgb(124, 58, 237),
+      rgb(12, 74, 110)
+    );
+  }
+
   /* Border Glow Effect */
   .border-glow {
     @apply relative;
@@ -102,15 +115,15 @@ body {
 
   /* Paragraphs */
   .paragraph-lg {
-    @apply font-titillium font-medium tracking-wide
+    @apply font-titillium  tracking-wide
            xl:text-xl lg:text-lg sm:text-base text-sm;
   }
   .paragraph-md {
-    @apply font-titillium font-medium tracking-wide
+    @apply font-titillium  tracking-wide
            xl:text-lg lg:text-base text-sm;
   }
   .paragraph-sm {
-    @apply font-titillium font-medium tracking-wide
+    @apply font-titillium  tracking-wide
            xl:text-base lg:text-sm text-xs;
   }
 }
