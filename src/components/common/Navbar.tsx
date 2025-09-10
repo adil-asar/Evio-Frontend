@@ -14,20 +14,20 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="h-[75px] sticky top-0 z-50 bg-white  border-gray-200 ">
+    <header className="h-[75px] sticky top-0 z-50 bg-accent border-b  border-slate-700 ">
       <div className="containerize flex justify-between items-center h-full">
         <div className="text-2xl font-bold">
           <Link to="/">
-            <img src="./images/logo.png" alt="logo" className="xl:w-28 lg:w-24 md:w-20 w-16" />
+            <img src="./images/logo.png" alt="logo" className=" lg:w-24 md:w-20 w-16" />
           </Link>
         </div>
 
-        <nav className="hidden md:flex gap-12  paragraph-md tracking-wider font-titillium font-semibold text-accent capitalize">
+        <nav className="hidden md:flex gap-12  paragraph-md tracking-wider font-titillium font-medium capitalize">
           {menuItems.map((item) => (
             <Link
               key={item.path}
               to={item.path}
-              className="hover:text-dark  transition-colors duration-300"
+              className="hover:text-dark text-white  transition-colors duration-300"
             >
               {item.name}
             </Link>
@@ -41,11 +41,11 @@ const Navbar = () => {
         </div>
 
         <button
-          className="md:hidden w-10 h-10  p-0 flex items-center justify-center focus:outline-none"
+          className="md:hidden w-10 h-10  p-0 text-white flex items-center justify-center focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle Menu"
         >
-          {isOpen ? <IoMdClose className="text-2xl" /> : <IoIosMenu className="text-2xl" />}
+          {isOpen ? <IoMdClose className="text-2xl " /> : <IoIosMenu className="text-2xl" />}
         </button>
       </div>
 
@@ -58,14 +58,18 @@ const Navbar = () => {
           <Link
             key={item.path}
             to={item.path}
-            className="hover:text-accent transition-colors duration-300 h-11 flex items-center border-b last:border-b-0 border-gray-300  sm:px-10 px-6 w-full"
+            className="hover: transition-colors duration-300 h-11 flex items-center border-b last:border-b-0 border-gray-300  sm:px-10 px-6 w-full"
             onClick={() => setIsOpen(false)}
           >
             {item.name}
           </Link>
         ))}
 
-        <Link to="/contact" className="m-4  text-center btn" onClick={() => setIsOpen(false)}>
+        <Link
+          to="/contact"
+          className="m-4 font-medium text-center btn"
+          onClick={() => setIsOpen(false)}
+        >
           Contact
         </Link>
       </div>
