@@ -9,7 +9,7 @@ const Hero: React.FC = () => {
       <ParticlesBackground />
 
       <div className="containerize relative z-10">
-        <Tagline text="Smart. Reliable. Future-Ready." />
+        <Tagline text="Smart. Reliable. Future-Ready." className="mx-auto" />
         <div className="text-center">
           <h1 className="heading-lg mb-6 ">
             Smart <span className="text-gradient"> Real Estate </span> Solutions{" "}
