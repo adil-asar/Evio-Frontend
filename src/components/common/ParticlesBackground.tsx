@@ -1,53 +1,99 @@
-import { useCallback } from "react";
-import Particles from "react-tsparticles";
-import type { Engine } from "tsparticles-engine";
-import { loadFull } from "tsparticles";
+import React, { useEffect, useState } from "react";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
+import type { ISourceOptions } from "@tsparticles/engine";
 
-const ParticlesBackground = () => {
-  const particlesInit = useCallback(async (engine: Engine) => {
-    // load tsparticles bundle
-    await loadFull(engine);
+// --- custom extensions to allow min/area ---
+type ExtendedAnimationOptions = {
+  enable?: boolean;
+  speed?: number;
+  min?: number; // 👈 allow min
+  sync?: boolean;
+};
+
+type ExtendedDensityOptions = {
+  enable?: boolean;
+  area?: number; // 👈 allow area
+};
+
+interface ExtendedSourceOptions extends ISourceOptions {
+  particles?: ISourceOptions["particles"] & {
+    number?: {
+      value?: number;
+      density?: ExtendedDensityOptions;
+    };
+    opacity?: {
+      value?: number;
+      animation?: ExtendedAnimationOptions;
+    };
+    size?: {
+      value?: { min: number; max: number };
+      animation?: ExtendedAnimationOptions;
+    };
+  };
+}
+
+const ParticlesBackground: React.FC = () => {
+  const [init, setInit] = useState(false);
+
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      await loadSlim(engine);
+    }).then(() => setInit(true));
   }, []);
 
-  return (
-    <Particles
-      id="tsparticles"
-      init={particlesInit}
-      options={{
-        fullScreen: { enable: false }, // keep particles inside container
-        background: {
-          color: "transparent", // no background, let section bg show
+  const options: ExtendedSourceOptions = {
+    fullScreen: { enable: false },
+    background: { color: "transparent" },
+    particles: {
+      number: {
+        value: 80,
+        density: { enable: true, area: 200 },
+      },
+      color: { value: ["#fda7df", "#d980fa"] },
+      shape: { type: "circle" },
+      opacity: {
+        value: 0.8,
+        animation: {
+          enable: true,
+          speed: 1,
+          min: 0.3, // ✅ allowed
+          sync: false,
         },
-        fpsLimit: 60,
-        particles: {
-          number: { value: 50, density: { enable: true, area: 800 } },
-          color: { value: "#ffffff" },
-          shape: { type: "circle" },
-          opacity: { value: 0.5 },
-          size: { value: { min: 1, max: 3 } },
-          move: { enable: true, speed: 1, direction: "none", outModes: "out" },
-          links: {
-            enable: true,
-            color: "#ffffff",
-            distance: 150,
-            opacity: 0.3,
-            width: 1,
-          },
+      },
+      size: {
+        value: { min: 2, max: 4 },
+        animation: {
+          enable: true,
+          speed: 2,
+          min: 0.3, // ✅ allowed
+          sync: false,
         },
-        interactivity: {
-          events: {
-            onHover: { enable: true, mode: "repulse" },
-            onClick: { enable: true, mode: "push" },
-          },
-          modes: {
-            repulse: { distance: 100, duration: 0.4 },
-            push: { quantity: 3 },
-          },
-        },
-      }}
-      className="absolute inset-0 -z-10"
-    />
-  );
+      },
+      move: {
+        enable: true,
+        speed: 0.8,
+        direction: "none",
+        random: true,
+        straight: false,
+        outModes: { default: "out" },
+      },
+    },
+    interactivity: {
+      events: {
+        onHover: { enable: true, mode: "repulse" },
+        onClick: { enable: true, mode: "push" },
+      },
+      modes: {
+        repulse: { distance: 60, duration: 1 },
+        push: { quantity: 1 },
+      },
+    },
+  };
+
+  if (!init) return null;
+
+  return <Particles id="firefly-particles" className="absolute inset-0 z-0" options={options} />;
 };
 
 export default ParticlesBackground;

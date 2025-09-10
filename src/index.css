@@ -23,7 +23,7 @@ body {
   /* Colors */
   --color-light: #fda7df;
   --color-dark: #d980fa;
-  --color-accent: #001f3f;
+  --color-accent: #ecf0f1;
   --color-accent-light: #0d2e51; /* New accent light color */
   /* Fonts */
   --font-syne: "Syne", sans-serif;
@@ -68,7 +68,7 @@ body {
 
   .text-gradient {
     @apply bg-clip-text text-transparent 
-         bg-gradient-to-r from-dark to-[#ffd987];
+         bg-gradient-to-r from-dark to-light ;
   }
 
   /* Headings */

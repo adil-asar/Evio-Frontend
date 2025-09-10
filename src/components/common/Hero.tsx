@@ -1,15 +1,23 @@
+import React from "react";
+import ParticlesBackground from "./ParticlesBackground";
+
 const Hero: React.FC = () => {
   return (
-    <section className="w-full bg-accent  lg:py-24 py-16">
-      <div className="containerize">
-        <div className=" paragraph-sm mb-8 max-w-[260px] mx-auto text-center text-white bg-accent-light rounded-full py-1.5  border-glow">
+    <section className="relative w-full  min-h-[87.5vh] flex items-center justify-center  overflow-hidden ">
+      {/* Particles background */}
+      <ParticlesBackground />
+
+      <div className="containerize relative z-10">
+        <div className="paragraph-sm mb-8 max-w-[260px] mx-auto text-center bg-accent rounded-full py-1.5 border-glow">
           <p>Smart. Reliable. Future-Ready.</p>
         </div>
         <div className="text-center">
-          <h1 className="heading-lg mb-6 text-gradient">
-            Smart Real Estate Solutions <br className="md:flex hidden" /> for Your Dream Home <br />
+          <h1 className="heading-lg mb-6 ">
+            Smart <span className="text-gradient"> Real Estate </span> Solutions{" "}
+            <br className="md:flex hidden" /> for Your{" "}
+            <span className="text-gradient"> Dream Home</span> <br />
           </h1>
-          <h2 className="mx-auto max-w-2xl  paragraph-lg mb-7 text-white">
+          <h2 className="mx-auto max-w-2xl paragraph-lg mb-7 ">
             Buy, sell, or rent properties with ease. Evio connects you to trusted real estate
             listings, modern homes, and top investment opportunities.
           </h2>
@@ -19,4 +27,5 @@ const Hero: React.FC = () => {
     </section>
   );
 };
+
 export default Hero;

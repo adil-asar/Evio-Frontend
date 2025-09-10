@@ -14,7 +14,7 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="h-[75px] sticky top-0 z-50 bg-accent border-b  border-slate-700 ">
+    <header className="h-[75px] fixed w-full top-0 z-50 ">
       <div className="containerize flex justify-between items-center h-full">
         <div className="text-2xl font-bold">
           <Link to="/">
@@ -27,7 +27,7 @@ const Navbar = () => {
             <Link
               key={item.path}
               to={item.path}
-              className="hover:text-dark text-white  transition-colors duration-300"
+              className="hover:text-dark text-black  font-medium transition-colors duration-300"
             >
               {item.name}
             </Link>
@@ -41,7 +41,7 @@ const Navbar = () => {
         </div>
 
         <button
-          className="md:hidden w-10 h-10  p-0 text-white flex items-center justify-center focus:outline-none"
+          className="md:hidden w-10 h-10  p-0 text-black flex items-center justify-center focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle Menu"
         >
