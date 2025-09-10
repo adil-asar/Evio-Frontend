@@ -10,4 +10,3 @@ const Tagline = ({ text, className = "" }) => {
 };
 
 export default Tagline;
-7678yuihi
