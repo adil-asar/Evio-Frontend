@@ -1,5 +1,6 @@
 import React from "react";
 import ParticlesBackground from "./ParticlesBackground";
+import Tagline from "./Tagline";
 
 const Hero: React.FC = () => {
   return (
@@ -8,9 +9,7 @@ const Hero: React.FC = () => {
       <ParticlesBackground />
 
       <div className="containerize relative z-10">
-        <div className="paragraph-sm mb-8 max-w-[260px] mx-auto text-center bg-accent rounded-full py-1.5 border-glow">
-          <p>Smart. Reliable. Future-Ready.</p>
-        </div>
+        <Tagline text="Smart. Reliable. Future-Ready." />
         <div className="text-center">
           <h1 className="heading-lg mb-6 ">
             Smart <span className="text-gradient"> Real Estate </span> Solutions{" "}
