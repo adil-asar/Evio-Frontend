@@ -6,7 +6,7 @@ type TaglineProps = {
 const Tagline = ({ text, className = "" }: TaglineProps) => {
   return (
     <div
-      className={`paragraph-sm mb-8 max-w-[260px]  text-center bg-accent rounded-full py-1.5 border-glow ${className}`}
+      className={`paragraph-sm  max-w-[260px]  text-center animate-pulse text-white linear-gradient rounded-full py-1  ${className}`}
     >
       <p>{text}</p>
     </div>

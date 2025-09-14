@@ -24,7 +24,8 @@ body {
   --color-light: #fda7df;
   --color-dark: #d980fa;
   --color-accent: #ecf0f1;
-  --color-accent-light: #0d2e51; /* New accent light color */
+  --color-accent-light: #0d2e51;
+  --color-accent-dark: #001f3f; /* New accent light color */
   /* Fonts */
   --font-syne: "Syne", sans-serif;
   --font-titillium: "Titillium Web", sans-serif;
@@ -59,16 +60,25 @@ body {
   .btn {
     @apply md:px-8 px-5  md:py-2.5 py-2 
            font-titillium font-medium tracking-wide capitalize  
-           rounded-full md:text-base text-sm text-white 
+           rounded-sm md:text-base text-sm text-white 
            bg-gradient-to-r from-dark to-light 
            hover:from-light hover:to-dark 
            hover:scale-105 
            transition-all duration-500 ease-in-out;
   }
 
+  .linear-gradient {
+    @apply bg-gradient-to-r from-dark to-light 
+           hover:from-light hover:to-dark;
+  }
+
   .text-gradient {
     @apply bg-clip-text text-transparent 
-         bg-gradient-to-r from-dark to-light ;
+         bg-gradient-to-r from-dark to-light;
+  }
+
+  .round {
+    @apply xl:rounded-[100px] lg:rounded-[80px] md:rounded-[60px] rounded-[40px];
   }
 
   /* Headings */
@@ -91,7 +101,7 @@ body {
   /* Paragraphs */
   .paragraph-lg {
     @apply font-titillium  tracking-wide
-           xl:text-xl lg:text-lg sm:text-base text-sm;
+           2xl:text-xl xl:text-lg sm:text-base text-sm;
   }
   .paragraph-md {
     @apply font-titillium  tracking-wide
@@ -100,6 +110,11 @@ body {
   .paragraph-sm {
     @apply font-titillium  tracking-wide
            xl:text-base lg:text-sm text-xs;
+  }
+
+  /* padding */
+  .section-padding {
+    @apply py-8 md:py-12 lg:py-16 xl:py-20;
   }
 }
 
