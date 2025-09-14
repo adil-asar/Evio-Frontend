@@ -1,5 +1,11 @@
+import ComingSoon from "../../components/common/ComingSoon";
+
 const Contact = () => {
-  return <div>Contact</div>;
+  return (
+    <div>
+      <ComingSoon />
+    </div>
+  );
 };
 
 export default Contact;
