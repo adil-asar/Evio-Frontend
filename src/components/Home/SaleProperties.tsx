@@ -6,9 +6,10 @@ const SaleProperties = () => {
           <h1 className="heading-lg">
             Properties <span className="text-gradient">For Sale</span>
           </h1>
-          <h2 className="paragraph-lg mt-4 max-w-screen-2md mx-auto">
-            Discover handpicked homes and investment properties in prime locations. From luxury
-            apartments to family houses and commercial spaces, Evio has something for everyone.
+          <h2 className="paragraph-lg mt-4 max-w-screen-lg mx-auto">
+            Discover a wide selection of houses, luxury apartments, and commercial properties for
+            sale in prime locations. Find your ideal home or investment opportunity with Evio’s
+            trusted listings.
           </h2>
         </div>
       </div>

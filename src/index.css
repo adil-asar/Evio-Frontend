@@ -93,7 +93,7 @@ body {
            md:text-3xl text-2xl;
   }
   .heading-sm {
-    @apply font-syne font-semibold 
+    @apply font-syne font-bold 
            2xl:text-5xl xl:text-4xl lg:text-3xl 
            md:text-2xl text-xl;
   }
