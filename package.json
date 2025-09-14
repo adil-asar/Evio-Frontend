@@ -5,15 +5,15 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint . --ext .ts,.tsx,.js,.jsx --max-warnings=0",
-    "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx --fix --max-warnings=0",
+    "build": "tsc && vite build",
+    "build:prod": "vite build --mode production",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "eslint src/**/*.{js,jsx,ts,tsx,json} --fix",
+    "preview": "vite preview",
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
-    "check": "npm run lint && npm run prettier",
-    "fix": "npm run lint:fix && npm run prettier:fix",
-    "prepare": "husky install",
-    "test": "npm run check"
+    "prepare": "husky",
+    "test": "npm run lint && npm run prettier"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [

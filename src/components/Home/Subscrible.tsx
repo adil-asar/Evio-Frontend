@@ -1,5 +1,3 @@
-import React from "react";
-
 const Subscrible = () => {
   return <div>Subscrible</div>;
 };
