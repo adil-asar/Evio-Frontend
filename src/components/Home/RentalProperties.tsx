@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 const RentalProperties = () => {
   return (
-    <div className="padding-t">
+    <div className="padding-t padding-b">
       <div className="containerize">
         <div className="text-center">
           <h1 className="heading-lg">
@@ -11,6 +12,9 @@ const RentalProperties = () => {
             prime locations. Evio connects you with trusted real estate listings to find your
             perfect home or investment.
           </h2>
+          <Link to={`/properties`}>
+            <button className="btn mt-6">View All</button>
+          </Link>
         </div>
       </div>
     </div>

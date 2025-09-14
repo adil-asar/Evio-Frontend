@@ -4,6 +4,7 @@ import SaleProperties from "../../components/Home/SaleProperties";
 import WhoAreWe from "../../components/Home/WhoAreWe";
 import Cta from "../../components/common/Cta";
 import Hero from "../../components/common/Hero";
+import Newsletter from "../../components/common/Newsletter";
 
 const Home: React.FC = () => {
   return (
@@ -16,13 +17,14 @@ const Home: React.FC = () => {
       <Cta
         title={
           <>
-            Find Your Dream <span className="text-gradient">Property</span> Today
+            Find Your <span className="text-gradient"> Dream Property Today</span> with Evio
           </>
         }
-        subtitle="Browse premium homes, luxury apartments, and commercial spaces in prime locations. Start your real estate journey with Evio."
-        buttonText="Contact Us"
-        buttonLink="/contact"
+        subtitle="Browse premium houses, luxury apartments, family homes, and commercial spaces in prime locations worldwide. Start your real estate journey with Evio’s trusted experts and exclusive listings."
+        buttonText="Start Your Search"
+        buttonLink="/properties"
       />
+      <Newsletter />
     </div>
   );
 };
