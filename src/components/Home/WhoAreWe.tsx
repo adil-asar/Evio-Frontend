@@ -37,7 +37,7 @@ const WhoAreWe = () => {
               commercial properties and rental spaces, Evio connects you with the best opportunities
               in prime locations—built on trust, innovation, and customer satisfaction.
             </h3>
-            <Link to="/about-us" className="btn">
+            <Link to="/about" className="btn">
               Want to know more
             </Link>
           </div>

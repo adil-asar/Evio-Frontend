@@ -1,3 +1,9 @@
+import ComingSoon from "../../components/common/ComingSoon";
+
 export const Properties = () => {
-  return <div>Properties</div>;
+  return (
+    <div>
+      <ComingSoon />
+    </div>
+  );
 };

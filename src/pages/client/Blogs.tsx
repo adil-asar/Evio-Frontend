@@ -1,5 +1,11 @@
+import ComingSoon from "../../components/common/ComingSoon";
+
 const Blogs = () => {
-  return <div>Blogs</div>;
+  return (
+    <div>
+      <ComingSoon />
+    </div>
+  );
 };
 
 export default Blogs;
