@@ -5,7 +5,7 @@
 
 /* Tailwind Base Import */
 @import "tailwindcss";
-
+@plugin "flowbite/plugin";
 /* ================================
    Base Styles
    ================================ */
@@ -21,8 +21,9 @@ body {
    ================================ */
 @theme {
   /* Colors */
-  --color-light: #fda7df;
-  --color-dark: #d980fa;
+  --color-light: #fadd89;
+  --color-accent: #ecf0f1;
+  --color-dark: #f79f1f;
   --color-accent: #ecf0f1;
   --color-accent-light: #0d2e51;
   --color-accent-dark: #001f3f; /* New accent light color */
@@ -60,7 +61,7 @@ body {
   .btn {
     @apply md:px-8 px-5  md:py-2.5 py-2 
            font-titillium font-medium tracking-wide capitalize  
-           rounded-sm md:text-base text-sm text-white 
+           rounded-full md:text-base text-sm text-white 
            bg-gradient-to-r from-dark to-light 
            hover:from-light hover:to-dark 
            hover:scale-105 

@@ -1,17 +1,17 @@
 // eslint.config.js
-import js from '@eslint/js';
-import configPrettier from 'eslint-config-prettier';
-import pluginPrettier from 'eslint-plugin-prettier';
-import pluginReact from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
-import { defineConfig } from 'eslint/config';
-import globals from 'globals';
-import tseslint from 'typescript-eslint';
+import js from "@eslint/js";
+import configPrettier from "eslint-config-prettier";
+import pluginPrettier from "eslint-plugin-prettier";
+import pluginReact from "eslint-plugin-react";
+import reactHooks from "eslint-plugin-react-hooks";
+import { defineConfig } from "eslint/config";
+import globals from "globals";
+import tseslint from "typescript-eslint";
 
 export default defineConfig([
   // JS base rules
   {
-    files: ['**/*.{js,mjs,cjs}'],
+    files: ["**/*.{js,mjs,cjs}"],
     languageOptions: {
       globals: globals.browser,
     },
@@ -25,10 +25,10 @@ export default defineConfig([
 
   // React + Hooks + Prettier
   {
-    files: ['**/*.{jsx,tsx,ts,js}'],
+    files: ["**/*.{jsx,tsx,ts,js}"],
     plugins: {
       react: pluginReact,
-      'react-hooks': reactHooks,
+      "react-hooks": reactHooks,
       prettier: pluginPrettier,
     },
     rules: {
@@ -37,16 +37,16 @@ export default defineConfig([
       ...reactHooks.configs.recommended.rules,
 
       // Prettier
-      'prettier/prettier': 'error',
+      "prettier/prettier": "error",
 
       // Common React/TS rules
-      'react/react-in-jsx-scope': 'off',
-      'react/prop-types': 'off',
-      '@typescript-eslint/no-unused-vars': ['warn'],
+      "react/react-in-jsx-scope": "off",
+      "react/prop-types": "off",
+      "@typescript-eslint/no-unused-vars": ["off"],
     },
     settings: {
       react: {
-        version: 'detect',
+        version: "detect",
       },
     },
   },
