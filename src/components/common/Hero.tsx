@@ -1,5 +1,4 @@
 import React from "react";
-import ParticlesBackground from "./ParticlesBackground";
 import Tagline from "./Tagline";
 
 const Hero: React.FC = () => {
@@ -8,13 +7,8 @@ const Hero: React.FC = () => {
       className="relative w-full min-h-[87.5vh] flex items-center justify-center text-white overflow-hidden 
                  bg-accent-light bg-[url('/images/hero.jpg')] bg-cover bg-center"
     >
-      {/* Dark overlay (optional, for readability) */}
       <div className="absolute inset-0 bg-black/80 z-0"></div>
 
-      {/* Particles background */}
-      {/* <ParticlesBackground /> */}
-
-      {/* Content */}
       <div className="containerize relative z-10 text-center">
         <Tagline text="Smart. Reliable. Future-Ready." className="mx-auto mb-8" />
         <h1 className="heading-lg mb-6">

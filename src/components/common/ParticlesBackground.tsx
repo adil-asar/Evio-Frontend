@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
-import type { ISourceOptions } from '@tsparticles/engine';
-import Particles, { initParticlesEngine } from '@tsparticles/react';
-import { loadSlim } from '@tsparticles/slim';
+import type { ISourceOptions } from "@tsparticles/engine";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
 
 // --- custom extensions to allow min/area ---
 type ExtendedAnimationOptions = {
@@ -18,7 +18,7 @@ type ExtendedDensityOptions = {
 };
 
 interface ExtendedSourceOptions extends ISourceOptions {
-  particles?: ISourceOptions['particles'] & {
+  particles?: ISourceOptions["particles"] & {
     number?: {
       value?: number;
       density?: ExtendedDensityOptions;
@@ -45,14 +45,14 @@ const ParticlesBackground: React.FC = () => {
 
   const options: ExtendedSourceOptions = {
     fullScreen: { enable: false },
-    background: { color: 'transparent' },
+    background: { color: "transparent" },
     particles: {
       number: {
         value: 80,
         density: { enable: true, area: 200 },
       },
-      color: { value: ['#fda7df', '#d980fa'] },
-      shape: { type: 'circle' },
+      color: { value: ["#fda7df", "#d980fa"] },
+      shape: { type: "circle" },
       opacity: {
         value: 0.8,
         animation: {
@@ -74,16 +74,16 @@ const ParticlesBackground: React.FC = () => {
       move: {
         enable: true,
         speed: 0.8,
-        direction: 'none',
+        direction: "none",
         random: true,
         straight: false,
-        outModes: { default: 'out' },
+        outModes: { default: "out" },
       },
     },
     interactivity: {
       events: {
-        onHover: { enable: true, mode: 'repulse' },
-        onClick: { enable: true, mode: 'push' },
+        onHover: { enable: true, mode: "repulse" },
+        onClick: { enable: true, mode: "push" },
       },
       modes: {
         repulse: { distance: 60, duration: 1 },
@@ -94,7 +94,7 @@ const ParticlesBackground: React.FC = () => {
 
   if (!init) return null;
 
-  return <Particles id='firefly-particles' className='absolute inset-0 z-0' options={options} />;
+  return <Particles id="firefly-particles" className="absolute inset-0 z-0" options={options} />;
 };
 
 export default ParticlesBackground;
