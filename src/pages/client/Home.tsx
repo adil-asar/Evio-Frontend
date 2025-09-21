@@ -4,7 +4,6 @@ import SaleProperties from "../../components/Home/SaleProperties";
 import WhoAreWe from "../../components/Home/WhoAreWe";
 import Cta from "../../components/common/Cta";
 import Hero from "../../components/common/Hero";
-import Newsletter from "../../components/common/Newsletter";
 
 const Home: React.FC = () => {
   return (

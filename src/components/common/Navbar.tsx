@@ -62,7 +62,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden w-10 h-10 p-0 text-black flex items-center justify-center focus:outline-none"
+          className="md:hidden w-10 h-10 p-0 text-white flex items-center justify-center focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle Menu"
         >
@@ -89,7 +89,7 @@ const Navbar = () => {
 
         <Link
           to="/contact"
-          className="m-4 font-medium text-center btn-primary"
+          className="  text-left font-semibold sm:px-10 px-6 w-full py-4 btn-primary"
           onClick={() => setIsOpen(false)}
         >
           Contact
