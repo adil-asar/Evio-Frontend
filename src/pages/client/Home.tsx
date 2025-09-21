@@ -17,14 +17,13 @@ const Home: React.FC = () => {
       <Cta
         title={
           <>
-            Find Your <span className="text-gradient"> Dream Property Today</span> with Evio
+            Find Your <span className="text-gradient"> Dream Property</span> with Evio
           </>
         }
         subtitle="Browse premium houses, luxury apartments, family homes, and commercial spaces in prime locations worldwide. Start your real estate journey with Evio’s trusted experts and exclusive listings."
         buttonText="Start Your Search"
         buttonLink="/properties"
       />
-      <Newsletter />
     </div>
   );
 };

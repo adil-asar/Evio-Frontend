@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { Link } from "react-router-dom";
 import PropertyCardSkeleton from "../common/PropertyCardSkeleton";
 const SaleProperties = () => {
@@ -19,7 +18,7 @@ const SaleProperties = () => {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:mt-14 mt-10">
           {Array.from({ length: 6 }).map((_, i) => (
             <PropertyCardSkeleton key={i} />
           ))}
