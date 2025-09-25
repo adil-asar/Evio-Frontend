@@ -2,6 +2,7 @@ import FeaturedProperties from "../../components/Home/FeaturedProperties";
 import RentalProperties from "../../components/Home/RentalProperties";
 import SaleProperties from "../../components/Home/SaleProperties";
 import WhoAreWe from "../../components/Home/WhoAreWe";
+import WhyChooseEvio from "../../components/Home/WhyChooseEvio";
 import Cta from "../../components/common/Cta";
 import Hero from "../../components/common/Hero";
 
@@ -23,6 +24,7 @@ const Home: React.FC = () => {
         buttonText="Start Your Search"
         buttonLink="/properties"
       />
+      <WhyChooseEvio />
     </div>
   );
 };
